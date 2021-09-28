@@ -1,0 +1,67 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,600&display=swap');
+
+html {
+    width: 100%;
+    height: 100%;
+}
+
+*{
+    box-sizing: border-box;
+}
+
+body {
+    padding: 0px;
+    margin: 0px;
+    font-family: 'Poppins', sans-serif;
+    color: #434343;
+    font-size: 16px;
+    line-height: 1.2;
+}
+
+.bodyContianer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+
+ul.childList {
+    list-style: none;
+    margin: 0px;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    flex-wrap: wrap;
+    padding: 20px;
+    counter-reset: listCount;
+}
+
+ul.childList li:after {
+    content: counter(listCount);
+    counter-increment: listCount;
+}
+
+ul.childList li {
+    flex: 0 calc(25% - 30px);
+    margin: 15px;
+    display: block;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0px 0px 10px 0px #0000004a;
+    border-radius: 8px;
+    text-align: center;
+}
+
+ul.childList li:nth-child(4n+4){
+    background-color: red;
+    color: #fff;
+}
+
+ul.childList li:first-child{
+    background-color: greenyellow;
+}
+
+ul.childList li:last-child{
+    background-color:hotpink;
+}
